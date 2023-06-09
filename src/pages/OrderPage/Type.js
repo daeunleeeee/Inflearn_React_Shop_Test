@@ -26,10 +26,10 @@ export default function Type({ orderType }) {
   if (error) {
     return <ErrorBanner message="에러가 발생했습니다." />;
   }
-  const ItemComponents = orderType === "products" ? Products : Options;
+  const ItemComponent = orderType === "products" ? Products : Options;
 
   const optionItems = items.map((item) => (
-    <ItemComponents
+    <ItemComponent
       key={item.name}
       name={item.name}
       imagePath={item.imagePath}
